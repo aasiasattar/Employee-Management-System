@@ -1,0 +1,118 @@
+{% extends 'emp_navigation.html' %}
+
+{% block content %}
+<a href="{% url 'edit_education' %}" class="btn btn-primary float-right btn-sm" style="background-color: maroon;">Edit My Education</a>
+<h4 class="p-2 font-weight-bold " style="border-bottom: 2px solid green; color: maroon;"> My Education Detail</h4>
+
+
+        <div class="card shadow" style="border-top: 2px solid green;">
+            <div class="card-body">
+               
+
+                <div class="container-fluid">
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Post Graduate Course</th>
+                            <td>{{education.course_pg}}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Institute Name of PG</th>
+                            <td>{{education.clg_uni_pg}}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Year of Passing PG</th>
+                            <td>{{education.yearofpassing_pg}}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Percentage of PG</th>
+                            <td>{{education.percentage_pg}}</td>
+                        </tr>
+
+
+
+
+                        <tr>
+                            <th>Graduation Course</th>
+                            <td>{{education.course_gra}}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Institute Name of GRA</th>
+                            <td>{{education.clg_uni_gra}}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Year of Passing GRA</th>
+                            <td>{{education.yearofpassing_gra}}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Percentage of GRA</th>
+                            <td>{{education.percentage_gra}}</td>
+                        </tr>
+
+
+
+
+
+                       <tr>
+                            <th>Senior Secondary Course</th>
+                            <td>{{education.course_ssc}}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Institute Name of SSC</th>
+                            <td>{{education.clg_uni_ssc}}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Year of Passing SSC</th>
+                            <td>{{education.yearofpassing_ssc}}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Percentage of SSC</th>
+                            <td>{{education.percentage_ssc}}</td>
+                        </tr>
+
+
+
+                        <tr>
+                            <th>Heigher Secondary Course</th>
+                            <td>{{education.course_hsc}}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Institute Name of HSC</th>
+                            <td>{{education.clg_uni_hsc}}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Year of Passing HSC</th>
+                            <td>{{education.yearofpassing_hsc}}</td>
+                        </tr>
+
+                        <tr>
+                            <th>Percentage of HSC</th>
+                            <td>{{education.percentage_hsc}}</td>
+                        </tr>
+                      
+
+
+                    </table>
+                </div>  
+                 
+                </div>
+            </div>
+
+        </div>
+        
+
+
+{% endblock %}
+
+

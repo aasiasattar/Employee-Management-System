@@ -1,0 +1,137 @@
+{% extends 'emp_navigation.html' %}
+
+{% block content %}
+<h4 class="p-2 font-weight-bold " style="border-bottom: 2px solid green; color: maroon;"> Edit Experience</h4>
+
+
+    
+        <div class="card shadow" style="border-top: 2px solid green;">
+            <div class="card-body">
+
+                <div class="container-fluid">
+                    <form method="post">
+                        {% csrf_token %}
+
+                        <div class="form-row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <labe>First company Name</labe>
+                                    <input type="text" name="name1" class="form-control" placeholder="Enter First Company Name"  value="{{experience.company1_name}}">
+                                </div>
+                        </div>
+
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <labe>First Job Designation</labe>
+                                <input type="text" name="jobdesignation1" class="form-control" placeholder="Enter Job designation" value="{{experience.company1_designation}}">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <labe>First Job Salary</labe>
+                                <input type="text" name="jobsalary1" class="form-control" placeholder="Enter Job Salary" value="{{experience.company1_salary}}">
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <labe>First Job Duration</labe>
+                                <input type="text" name="jobduration1" class="form-control" placeholder="Enter Duration" value="{{experience.company2_duration}}">
+                            </div>
+                        </div>
+
+
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <labe>Second company Name</labe>
+                                <input type="text" name="name2" class="form-control" placeholder="Enter second Company Name"  value="{{experience.company2_name}}">
+                            </div>
+                    </div>
+
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <labe>Second Job Designation</labe>
+                            <input type="text" name="jobdesignation2" class="form-control" placeholder="Enter Job designation" value="{{experience.company2_designation}}">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <labe>Second Job Salary</labe>
+                            <input type="text" name="jobsalary2" class="form-control" placeholder="Enter Job Salary" value="{{experience.company2_salary}}">
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <labe>Second Job Duration</labe>
+                            <input type="text" name="jobduration2" class="form-control" placeholder="Enter Duration" value="{{experience.company2_duration}}">
+                        </div>
+                    </div>
+
+
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <labe>Third company Name</labe>
+                            <input type="text" name="name3" class="form-control" placeholder="EnterThird Company Name"  value="{{experience.company3_name}}">
+                        </div>
+                </div>
+
+
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <labe>Third Job Designation</labe>
+                        <input type="text" name="jobdesignation3" class="form-control" placeholder="Enter Job designation" value="{{experience.company3_designation}}">
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <labe>Third Job Salary</labe>
+                        <input type="text" name="jobsalary3" class="form-control" placeholder="Enter Job Salary" value="{{experience.company3_salary}}">
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <labe>Thirdt Job Duration</labe>
+                        <input type="text" name="jobduration3" class="form-control" placeholder="Enter Department" value="{{experience.company3_duration}}">
+                    </div>
+                </div>
+
+                        <br>
+
+                <input type="submit" value="Submit" class=" btn btn-primary" style="background-color: black; color: white; margin-left: 5px;">
+
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+
+{% if error == "no" %}
+<script>
+   alert('Experience Updated Successfully');
+   window.location = ('{% url 'myexperience' %}');
+</script>
+{% endif %}
+        
+{% if error == "yes" %}
+<script>
+    alert('something went wron ! Try Again');
+</script>
+        
+{% endif %}
+        
+        
+
+
+{% endblock %}
+
+

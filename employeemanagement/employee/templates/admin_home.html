@@ -1,0 +1,22 @@
+{% extends 'admin_navigation.html' %}
+
+{% block content %}
+<h4 class="p-2 font-weight-bold" style="border-bottom: 2px solid green;">Admin Dashboard</h4>
+
+<div class="row text-center">
+    <div class="col-sm-12 p-2">
+        <div class="card shadow">
+            <div class="card-body">
+
+                <h4 style="color: maroon;">Welcome Back to ERMS</h4>
+                <h5 class="text-capitalize">{{request.user.first_name}} {{request.user.last_name}}</h5>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+
+{% endblock %}

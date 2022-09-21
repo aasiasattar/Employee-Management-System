@@ -1,0 +1,58 @@
+{% include 'header.html' %}
+{% block content %}
+
+
+
+
+<div class="card shadow m-5">
+    <div class="card-body">
+        <h5 class="p-2" style="border-bottom:2px solid orange;">Employee LogIn</h5>
+        <div class="container-fluid">
+            <form method="post" >
+                {% csrf_token %}
+
+                <div class="form-row">
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <labe>Email ID</labe>
+                            <input type="email" name="uname" class="form-control" placeholder="Enter UserName" required>
+                        </div>
+                    </div>
+
+                    
+                    <div class="col-sm-12">
+                        <div class="form-group">
+                            <labe>Password</labe>
+                            <input type="password" name="pwd" class="form-control" placeholder="Enter password" required>
+                        </div>
+                    </div>
+
+       
+                </div>
+
+                <br>
+
+                <input type="submit" value="Login" class=" btn btn-primary" style="background-color: black; color: white;">
+
+            </form>
+
+        </div>
+    </div>
+
+</div>
+
+{% if error == "no" %}
+<script>
+    alert('Logged in Successfully');
+    window.location = ('{% url 'emp_home' %}');
+</script>
+{% endif %}
+
+{% if error == "yes" %}
+<script>
+    alert('Invalid Login ! Try Again');
+</script>
+
+{% endif %}
+
+{% endblock %}

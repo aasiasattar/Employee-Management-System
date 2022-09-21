@@ -1,0 +1,143 @@
+{% extends 'emp_navigation.html' %}
+
+{% block content %}
+<a href="{% url 'myeducation' %}" class="btn btn-primary float-right btn-sm" style="background-color: maroon;"> My Education Detail</a>
+<h4 class="p-2 font-weight-bold " style="border-bottom: 2px solid green; color: maroon;"> My Education Detail</h4>
+
+
+        <div class="card shadow" style="border-top: 2px solid green;">
+            <div class="card-body">
+               
+
+                <div class="container-fluid">
+                  <form method="post">
+                      {%csrf_token%}
+                   
+                  <div class="table-responsive">
+                    <table class="table table-bordered">
+                        <tr>
+                            <th>Post Graduate Course</th>
+                            <td><input type="text" name="course_pg" value="{{education.course_pg}}" class="form-control"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Institute Name of PG</th>
+                            <td><input type="text" name="clg_uni_pg" value="{{education.clg_uni_pg }}" class="form-control"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Year of Passing PG</th>
+                            <td><input type="text" name="yearofpassing_pg" value="{{education.yearofpassing_pg}}" class="form-control"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Percentage of PG</th>
+                            <td><input type="text" name="percentage_pg" value="{{education.percentage_pg}}" class="form-control"></td>
+                        </tr>
+
+
+
+
+                        <tr>
+                            <th>Graduation Course</th>
+                            <td><input type="text" name="course_gra" value="{{education.course_gra}}" class="form-control"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Institute Name of GRA</th>
+                            <td><input type="text" name="clg_uni_gra" value="{{education.clg_uni_gra}}" class="form-control"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Year of Passing GRA</th>
+                            <td><input type="text" name="yearofpassing_gra" value="{{education.yearofpassing_gra}}" class="form-control"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Percentage of GRA</th>
+                            <td><input type="text" name="percentage_gra" value="{{education.percentage_gra}}" class="form-control"></td>
+                        </tr>
+
+
+
+
+
+                       <tr>
+                            <th>Senior Secondary Course</th>
+                            <td><input type="text" name="course_ssc" value="{{education.course_ssc}}" class="form-control"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Institute Name of SSC</th>
+                            <td><input type="text" name="clg_uni_ssc" value="{{education.clg_uni_ssc}}" class="form-control"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Year of Passing SSC</th>
+                            <td><input type="text" name="yearofpassing_ssc" value="{{education.yearofpassing_ssc}}" class="form-control"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Percentage of SSC</th>
+                            <td><input type="text" name="percentage_ssc" value="{{education.percentage_ssc}}" class="form-control"></td>
+                        </tr>
+
+
+
+                        <tr>
+                            <th>Heigher Secondary Course</th>
+                            <td><input type="text" name="course_hsc" value="{{education.course_hsc}}" class="form-control"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Institute Name of HSC</th>
+                            <td><input type="text" name="clg_uni_hsc" value="{{education.clg_uni_hsc}}" class="form-control"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Year of Passing HSC</th>
+                            <td><input type="text" name="yearofpassing_hsc" value="{{education.yearofpassing_hsc}}" class="form-control"></td>
+                        </tr>
+
+                        <tr>
+                            <th>Percentage of HSC</th>
+                            <td><input type="text" name="percentage_hsc" value="{{education.percentage_hsc}}" class="form-control"></td>
+                        </tr>
+                      
+
+
+                    </table>
+                    <br>
+                    <input type="submit" value="Submit" class=" btn btn-primary" style="background-color: black; color: white; margin-left: 5px;">
+                </form> 
+                </div>  
+                 
+                </div>
+            </div>
+
+        </div>
+
+
+{% if error == "no" %}
+<script>
+   alert('Experience Updated Successfully');
+   window.location = ('{% url 'edit_education' %}');
+</script>
+{% endif %}
+                
+{% if error == "yes" %}
+<script>
+    alert('something went wron ! Try Again');
+</script>
+                
+{% endif %}
+                
+                
+        
+        
+        
+
+
+{% endblock %}
+
+
